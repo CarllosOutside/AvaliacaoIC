@@ -47,6 +47,9 @@ public class Main {
         if(pop3.getFittestPath().getFitness()>best3.getFitness())
             best3 = pop3.getFittestPath();
         //próxima população
+        pop1 = new Population(50, 0.3, numVertices, grafo1);
+        pop2 = new Population(50, 0.1, numVertices, grafo2);
+        pop3 = new Population(50, 0.6, numVertices, grafo3);
         numPop++;
         }
         //Imprimindo melhores soluções de cada grafo
