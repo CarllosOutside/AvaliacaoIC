@@ -17,7 +17,7 @@
 #### Gerando e Lendo Grafos
 
 São gerados grafos com caminho hamiltoniano, com quantidade de vértices definida pelo problema. A classe geradora de grafos <a href="https://github.com/CarllosOutside/AvaliacaoIC/blob/main/src/main/java/com/mycompany/avaliacaoic/problema1/pt1Grafo/GrafoGenerator.java">GrafoGenerator</a> cria $C_{2}^{maxVertex} = \frac{n\cdot(n-1)}{2}$ arestas no mínimo, de modo que garanta a existência de caminhos hamiltonianos (n = número de vértices).
-Mais arestas são criadas se o usuário escolher um valor de `e` maior que a combinação acima.
+Mais arestas são criadas se o usuário escolher um valor de `e` (número de arestas) maior que a combinação acima.
 
 Após criar uma lista de arestas, com `Vértice A` $\rightarrow$ `Vértice B` com pesos, a mesma classe geradora salva os dados do grafo em um arquivo .txt.
 
