@@ -10,7 +10,7 @@
 
 **1:** [PROBLEMA DO CAIXEIRO  VIAJANTE](#pcv)
 
-**2:** [...](#http)
+**2:** [PROBLEMA DA TORRE DE HANOI](#hanoi)
 <br/>
 ## <a href="https://github.com/CarllosOutside/AvaliacaoIC/tree/main/src/main/java/com/mycompany/avaliacaoic/problema1">CAIXEIRO VIAJANTE</a> <a name="pcv"></a>
 
@@ -49,3 +49,14 @@ Podemos evoluir uma população realizando crossing, unindo genomas das melhores
 Na classe <a href="https://github.com/CarllosOutside/AvaliacaoIC/blob/main/src/main/java/com/mycompany/avaliacaoic/problema1/pt2PCV/Main.java">main</a> unimos todas as anteriores. Geramos e lemos grafos, e em seguida criamos populações de caminhos hamiltonianos usando esses grafos(no exemplo, criamos populações de 50 indivíduos). 
 
 Fazemos com que 100 gerações evoluam+mutem em cada população, e depois pegamos o melhor caminho obtido. Em seguida, criamos uma nova população, com elementos aleatórios novos, e repetimos o processo.
+
+------
+## <a href="https://github.com/CarllosOutside/AvaliacaoIC/tree/main/src/main/java/com/mycompany/avaliacaoic/problema2Hanoi">TORRE DE HANOI</a> <a name="hanoi"></a>
+
+### Para este problema, modificamos a função do aima <a href="https://github.com/CarllosOutside/AvaliacaoIC/blob/main/src/main/java/aima/core/search/uninformed/DepthLimitedSearch.java"> depthLimitedSearch</a> de modo que cada nó seja acessado uma única vez. A quantidade total de nós são todas as combinações `C` possíveis das k peças nas 3 torres.
+
+Para `k=3`, temos `C=27`. A seguinte fórmula dá o número total de combinações: $C = k!\cdot \Big(1+\frac{3}{(k-2)!}\Big)+3$.
+
+Como a busca se encerra quando o objetivo é achado, e queremos um limite de `k=7`, fizemos o calculo para o valor máximo de k, e fixamos um limite de nós `C=5190`.
+
+A solução para o problema não é ótima. Para 3 discos, obtemos 14 movimentos com a busca no grafo, diferente dos 7 movimentos da solução ótima. Para 7 discos, obtemos uma solução com 1094 movimentos buscando no grafo, ao invés dos 127 da solução ótima. A velocidade do algoritmo, porém, é muito alta, e a solução é encontrada em segundos, devido ao número limitado de nós existentes(após nossa modificação do código de busca de profundidade limitada, cada nó é visitado uma única vez).
