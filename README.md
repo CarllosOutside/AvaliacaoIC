@@ -57,7 +57,7 @@ Fazemos com que 100 gerações evoluam+mutem em cada população, e depois pegam
 
 Para `k=3`, temos `C=27`. A seguinte fórmula dá o número total de combinações: $C = k!\cdot \Big(1+\frac{3}{(k-2)!}\Big)+3$.
 
-Como a busca se encerra quando o objetivo é achado, e queremos um limite de `k=7`, fizemos o calculo para o valor máximo de k, e fixamos um limite de nós `C=5190`.
+Como a busca se encerra quando o objetivo é achado, e queremos um limite de `k=7`, fizemos o calculo para o valor máximo de k, e fixamos um limite de nós `C=5190` (Como no algoritmo depthLimitedSearch o limite C diminui uma unidade para cada nó `child` visitado, podemos visitar até um total de 5190 nós, o que garante que encontraremos solução para 7 discos).
 
 A solução para o problema não é ótima. Para `3 discos`, obtemos `14 movimentos com a busca no grafo` , diferente dos `7 movimentos da solução ótima`. 
 
