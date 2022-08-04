@@ -59,4 +59,6 @@ Para `k=3`, temos `C=27`. A seguinte fórmula dá o número total de combinaçõ
 
 Como a busca se encerra quando o objetivo é achado, e queremos um limite de `k=7`, fizemos o calculo para o valor máximo de k, e fixamos um limite de nós `C=5190`.
 
-A solução para o problema não é ótima. Para 3 discos, obtemos 14 movimentos com a busca no grafo, diferente dos 7 movimentos da solução ótima. Para 7 discos, obtemos uma solução com 1094 movimentos buscando no grafo, ao invés dos 127 da solução ótima. A velocidade do algoritmo, porém, é muito alta, e a solução é encontrada em segundos, devido ao número limitado de nós existentes(após nossa modificação do código de busca de profundidade limitada, cada nó é visitado uma única vez).
+A solução para o problema não é ótima. Para `3 discos`, obtemos `14 movimentos com a busca no grafo` , diferente dos `7 movimentos da solução ótima`. 
+
+Para `7 discos`, obtemos uma solução com `1094 movimentos` buscando no grafo, ao invés dos `127 da solução ótima`. A velocidade do algoritmo, porém, é muito alta, e a solução é encontrada em segundos, devido ao número limitado de nós existentes(após nossa modificação do código de busca de profundidade limitada, cada nó é visitado uma única vez).
