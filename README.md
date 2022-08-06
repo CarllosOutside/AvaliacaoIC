@@ -55,7 +55,7 @@ Fazemos com que 100 gerações evoluam+mutem em cada população, e depois pegam
 
 ### Para este problema, modificamos a função do aima <a href="https://github.com/CarllosOutside/AvaliacaoIC/blob/main/src/main/java/aima/core/search/uninformed/DepthLimitedSearch.java"> depthLimitedSearch</a> de modo que cada nó seja acessado uma única vez. A quantidade total de nós são todas as combinações `C` possíveis das k peças nas 3 torres.
 
-Para `k=3`, temos `C=27`. A seguinte fórmula dá o número total de combinações: $C = k!\cdot \Big(1+\frac{3}{(k-2)!}\Big)+3$.
+Para `k=3`, temos `C=27`. A seguinte fórmula dá o número total de combinações para k=3: $C = k!\cdot \Big(1+\frac{3}{(k-2)!}\Big)+3$.
 
 Como a busca se encerra quando o objetivo é achado, e queremos um limite de `k=7`, fizemos o calculo para o valor máximo de k, e fixamos um limite de nós `C=2187` (Como no algoritmo depthLimitedSearch o limite C diminui uma unidade para cada nó `child` visitado, podemos visitar até um total de 2187 nós, o que garante que encontraremos solução para 7 discos).
 Este valor 2187 foi encontrado usando o seguinte procedimento numerico: ![](https://i.ibb.co/hKL1jn8/hanoi7disks.jpg)
